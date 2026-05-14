@@ -1,0 +1,40 @@
+Sistema de Archivos Linux
+=========================
+
+/ (root)
+
+├── home/
+│   ├── mateo/
+│   │   ├── Documentos/
+│   │   ├── Descargas/
+│   │   └── Imagenes/
+│
+├── etc/
+│   ├── passwd
+│   ├── hosts
+│   └── ssh/
+│
+├── var/
+│   ├── log/
+│   ├── cache/
+│   └── www/
+│
+├── bin/
+│   ├── ls
+│   ├── cp
+│   └── mv
+│
+├── usr/
+│   ├── bin/
+│   ├── lib/
+│   └── local/
+│
+├── tmp/
+│
+├── boot/
+│
+├── dev/
+│
+├── proc/
+│
+└── sys/
