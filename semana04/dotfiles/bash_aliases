@@ -1,0 +1,77 @@
+# ~/.bash_aliases
+
+# ===== NAVEGACION =====
+
+alias ll='ls -lhF'
+alias la='ls -lhaF'
+alias l='ls -CF'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias lab='cd ~/linux-lab'
+
+# ===== SEGURIDAD =====
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# ===== SISTEMA =====
+
+alias c='clear'
+alias cls='clear'
+
+alias df='df -h'
+alias du='du -ah'
+
+alias mem='free -h'
+
+# ===== GIT =====
+
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log --oneline --graph --all'
+
+# ===== FUNCIONES =====
+
+mkcd() {
+
+    mkdir -p "$1" && cd "$1"
+
+    echo "Directorio creado:"
+    pwd
+}
+
+buscar() {
+
+    if [ -z "$1" ]; then
+
+        echo "Uso: buscar texto"
+        return 1
+    fi
+
+    grep -rn --color=auto "$1" .
+}
+
+duh() {
+
+    du -ah . 2>/dev/null | sort -h | tail -10
+}
+
+bak() {
+
+    if [ -f "$1" ]; then
+
+        cp "$1" "$1.bak"
+
+        echo "Backup creado"
+
+    else
+
+        echo "Archivo no encontrado"
+    fi
+}
