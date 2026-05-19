@@ -1,0 +1,35 @@
+# ~/.bashrc - Configuracion personalizada
+
+# ---- Historial ----
+
+HISTSIZE=5000
+HISTFILESIZE=10000
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+
+# ---- Opciones ----
+
+shopt -s checkwinsize
+shopt -s cdspell
+shopt -s globstar
+
+# ---- Variables de entorno ----
+
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+export LANG='es_ES.UTF-8'
+
+# ---- PATH personalizado ----
+
+export PATH="$HOME/scripts:$PATH"
+
+# ---- Prompt PS1 ----
+
+PS1='\[\e[1;32m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ '
+
+# ---- Cargar aliases ----
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
