@@ -1,0 +1,13 @@
+[2026-05-25 23:10:43] [INFO] === Inicio backup-check ===
+[2026-05-25 23:10:43] [INFO] Directorio: /Users/mateo/backups
+[2026-05-25 23:10:43] [INFO] Verificando directorio: /Users/mateo/backups
+[2026-05-25 23:10:43] [OK] Directorio accesible
+[2026-05-25 23:10:43] [INFO] Buscando backups
+[2026-05-25 23:10:43] [OK] Backups encontrados:        2
+[2026-05-25 23:10:43] [OK] Ultimo backup valido
+[2026-05-25 23:10:43] [INFO] Verificando antiguedad
+[2026-05-25 23:10:43] [WARNING] No hay backups recientes
+[2026-05-25 23:10:43] [INFO] Verificando tamanio
+[2026-05-25 23:10:43] [INFO] Tamanio: 1 MB
+[2026-05-25 23:10:43] [OK] Tamanio correcto
+[2026-05-25 23:10:43] [WARNING] Checks completados con advertencias
