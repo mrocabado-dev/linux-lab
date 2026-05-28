@@ -42,3 +42,13 @@
 [2026-05-27 23:06:44] [INFO   ] Disco:4% RAM:99% CPU-load:2.04
 [2026-05-27 23:06:44] [ALERTA ] RAM al 99%
 [2026-05-27 23:06:46] [INFO   ] Monitor detenido.
+[2026-05-27 23:12:25] [INFO   ] Iniciando monitor intervalo:2s
+[2026-05-27 23:12:25] [INFO   ] Umbrales disco=80% RAM=85%
+[2026-05-27 23:12:25] [INFO   ] Disco:4% RAM:99% CPU-load:3.10
+[2026-05-27 23:12:25] [ALERTA ] RAM al 99%
+[2026-05-27 23:12:27] [INFO   ] Disco:4% RAM:99% CPU-load:2.93
+[2026-05-27 23:12:27] [ALERTA ] RAM al 99%
+[2026-05-27 23:12:29] [INFO   ] Disco:4% RAM:99% CPU-load:2.93
+[2026-05-27 23:12:29] [ALERTA ] RAM al 99%
+[2026-05-27 23:12:31] [INFO   ] Limite de 3 iteraciones alcanzado.
+[2026-05-27 23:12:31] [INFO   ] Monitor finalizado.
