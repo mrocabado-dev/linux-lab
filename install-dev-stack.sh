@@ -14,3 +14,15 @@ fi
 
 echo "Actualizando repositorios..."
 sudo apt update -y
+
+
+instalar_paquete() {
+    paquete=$1
+
+    if dpkg -l | grep -q "$paquete"; then
+        echo "[OK] $paquete ya instalado"
+    else
+        echo "[INSTALANDO] $paquete"
+        sudo apt install -y "$paquete"
+    fi
+}
