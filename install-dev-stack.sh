@@ -11,3 +11,6 @@ if [[ "$ID" != "ubuntu" && "$ID" != "debian" ]]; then
     echo "Sistema no soportado"
     exit 1
 fi
+
+echo "Actualizando repositorios..."
+sudo apt update -y
