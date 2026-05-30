@@ -10,3 +10,12 @@ if [[ ! -d "$REPO" ]]; then
 fi
 
 echo "Analizando repositorio: $REPO"
+
+# Cargar lista de archivos
+archivos=()
+
+while IFS= read -r linea; do
+    archivos+=("$linea")
+done < <(find "$REPO" -type f | sort)
+
+echo "Total de archivos encontrados: ${#archivos[@]}"
