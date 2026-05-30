@@ -54,3 +54,25 @@ for semana in "$REPO"/semana*/; do
         tiene_readme["$nombre"]="NO"
     fi
 done
+
+# --- Matriz de resumen semanal ---
+semanas=()
+
+while IFS= read -r linea; do
+    semanas+=("$linea")
+done < <(find "$REPO" -maxdepth 1 -type d -name "semana*" | sort)
+
+COLS=3
+matriz_sem=()
+
+for (( i=0; i<${#semanas[@]}; i++ )); do
+    dir="${semanas[$i]}"
+
+    scripts=$(find "$dir" -name "*.sh" | wc -l)
+    docs=$(find "$dir" -name "*.md" | wc -l)
+    kb=$(du -sk "$dir" | awk '{print $1}')
+
+    matriz_sem[$((i*COLS+0))]=$scripts
+    matriz_sem[$((i*COLS+1))]=$docs
+    matriz_sem[$((i*COLS+2))]=${kb:-0}
+done
