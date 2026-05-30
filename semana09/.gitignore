@@ -1,0 +1,2 @@
+reportes/*.txt
+!reportes/.gitkeep
