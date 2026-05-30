@@ -52,3 +52,8 @@ do
         tiene_readme["$nombre"]="NO"
     fi
 done
+mapfile -t semanas < <(find "$REPO" -maxdepth 1 -type d -name "semana*" | sort)
+
+COLS=3
+
+declare -a matriz_sem
