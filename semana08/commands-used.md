@@ -1,43 +1,58 @@
-# Semana 08: Comandos y Técnicas Utilizadas
+# Semana 08 - Comandos y Tecnicas Utilizadas
 
 ## mapfile
 
+```bash
 mapfile -t archivos < <(find "$REPO" -type f | sort)
+```
 
-Sirve para cargar cada línea de salida en un elemento del array.
-
----
+Sirve para cargar líneas de texto dentro de un array.
 
 ## Arrays Asociativos
 
+```bash
 declare -A conteo
+conteo["$ext"]=$(( ${conteo["$ext"]:-0} + 1 ))
+```
 
-Permiten usar texto como índice.
-
-Ejemplo:
-
-conteo["sh"]=5
-
----
+Permiten almacenar pares clave-valor y realizar conteos por extensión.
 
 ## Matriz Simulada
 
-matriz[$((fila * columnas + columna))]
+```bash
+matriz[$((fila * COLS + columna))]
+```
 
-Permite representar una tabla bidimensional usando un array lineal.
-
----
+Permite representar una matriz bidimensional usando un array unidimensional.
 
 ## column
 
+```bash
 column -t
+```
 
-Alinea automáticamente columnas.
+Alinea automáticamente columnas de texto.
 
----
+## printf
 
-## paste
+```bash
+printf "%-12s %-4s %-4s\n"
+```
 
-paste -sd',' archivo.txt
+Permite formatear la salida en columnas con ancho fijo.
 
-Convierte una columna en una fila separada por comas.
+## find
+
+```bash
+find "$REPO" -type f
+```
+
+Busca archivos dentro de un directorio.
+
+## Arrays Indexados
+
+```bash
+arr+=("valor")
+```
+
+Permiten almacenar múltiples elementos en una misma variable.
