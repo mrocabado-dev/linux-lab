@@ -38,3 +38,17 @@ do
 
     tamano_ext["$ext"]=$(( ${tamano_ext["$ext"]:-0} + bytes ))
 done
+
+
+declare -A tiene_readme
+
+for semana in "$REPO"/semana*/
+do
+    nombre=$(basename "$semana")
+
+    if [[ -f "$semana/README.md" ]]; then
+        tiene_readme["$nombre"]="SI"
+    else
+        tiene_readme["$nombre"]="NO"
+    fi
+done
